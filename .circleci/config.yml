@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: "echo ${CIRCLE_WORKFLOW_ID:0:7}"
   
   create_and_deploy_front_end:
     docker:
